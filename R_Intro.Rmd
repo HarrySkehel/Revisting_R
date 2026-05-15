@@ -1,0 +1,66 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+install.packages("tidyverse")
+```
+
+```{r}
+install.packages("rlang")
+
+```
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r} 
+read_csv('data/dog_bites.csv')
+```
+
+```{r}
+install.packages('readxl')
+library(readxl)
+```
+
+```{r}
+seedmix <- read_excel("data/edinburgh_seedmix.xlsx")
+seedmix
+
+seedEast <- read_excel("data/edinburgh_seedmix.xlsx", sheet = 'East Neighbourhood')
+seedEast
+
+seedSouth <- read_excel("data/edinburgh_seedmix.xlsx", sheet = 4)
+seedSouth
+```
+
+```{r}
+
+install.packages('devtools')
+devtools::install_github('codeclan/CodeClanData')
+library(CodeClanData)
+
+```
+
+```{r}
+
+wksst <- read_table("https://www.cpc.ncep.noaa.gov/data/indices/wksst8110.for",
+  skip = 4,
+  col_names = c(
+    "week",
+    "Nino12",
+    "Nino3",
+    "Nino34",
+    "Nino4"
+  )
+)
+
+```
+
+```{r}
+wksst
+
+```
